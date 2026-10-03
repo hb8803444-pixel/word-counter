@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="99lQwJ7oiggAkIQwyCH3ETALjHMl0dBipfRlVfEkBBc" />
-    <title>Advanced Word & Character Counter</title>
+    
+    <!-- Heavy Global SEO Meta Tags -->
+    <title>Free Online Word Counter & Character Counter Tool</title>
+    <meta name="description" content="Use our 100% free online word counter and character counter tool. Instantly check word count, characters, sentences, paragraphs, and reading time worldwide.">
+    <meta name="keywords" content="word counter, character counter, text statistics, online word count tool, reading time calculator, sentence counter, free developer tools">
+    <meta name="author" content="Global Web Tools">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags for Global Reach -->
+    <meta property="og:title" content="Free Online Word & Character Counter Tool">
+    <meta property="og:description" content="Instantly count words, characters, and sentences online. Fast, free, and accurate tool for writers, students, and professionals worldwide.">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online Word & Character Counter">
+    <meta name="twitter:description" content="Instant word, character, and sentence counting tool. No installation required, works in your browser instantly.">
+
+    <!-- Schema.org Structured Data for Google Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Word & Character Counter",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "A free online tool to count words, characters, sentences, and estimate reading time instantly.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -29,6 +63,7 @@
             text-align: center;
             margin-bottom: 20px;
             color: #2c3e50;
+            font-size: 26px;
         }
         textarea {
             width: 100%;
@@ -51,7 +86,6 @@
             margin-top: 25px;
         }
         .stat-card {
-            background: #3498db;
             color: #fff;
             padding: 15px;
             border-radius: 8px;
@@ -86,8 +120,8 @@
 <body>
 
 <div class="container">
-    <h1>Word & Character Counter</h1>
-    <textarea id="textInput" placeholder="Yahan apna text type ya paste karein..."></textarea>
+    <h1>Free Online Word & Character Counter</h1>
+    <textarea id="textInput" placeholder="Type or paste your text here to count words and characters..."></textarea>
     
     <div class="stats-grid">
         <div class="stat-card" style="background: #3498db;">
@@ -132,7 +166,7 @@
         const sentences = text === '' ? [] : text.split(/[.!?]+/).filter(Boolean);
         sentenceCount.innerText = sentences.length;
 
-        // Reading Time (Average 200 words per minute)
+        // Reading Time Calculation
         const minutes = words.length / 200;
         readTime.innerText = minutes < 1 ? Math.ceil(words.length / 200 * 60) + ' sec' : Math.ceil(minutes) + ' min';
     });
